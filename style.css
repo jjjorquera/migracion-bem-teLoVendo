@@ -1,4 +1,4 @@
-body, h1, h2, p, nav, a{
+body, .header__title, .main__section-title, .main__section-text, .header__nav, a{
     margin: 0;
     padding: 0;
     text-decoration: none;
@@ -8,7 +8,7 @@ body{
     font-family: Arial, Helvetica, sans-serif;
 }
 
-h1, h2, p{
+.header__title, .main__section-title, .main__section-text {
     margin-bottom: 1rem;
 
 }
@@ -20,33 +20,33 @@ header {
 }
 
 /* CSS para nav, a */
-nav a {
+.header__nav-link {
     color: #333;
-    padding: 0 10px;
+    padding: 0px 10px;
 }
 
-nav a:hover{
-    color: rgb(60, 106, 156);
+.header__nav-link:hover{
+    color: rgb(31, 122, 43);
 }
 
-nav a::after {
+.header__nav-link::after {
     content: "|";
     padding: 0 10px;
 }
 
-nav a:last-child::after {
+.header__nav-link:last-child::after {
     content: none;
 } 
 
 /* padding a main*/
 
-main {
+.main {
     padding: 20px;
 }
 
 /* Estilos de galeria de imagen*/
 
-.galeria {
+.main__section-galery {
     display: flex; /* display flex aplica flex direction-row, lo que hace que los elementos esten posicionados horizontalmente en la web*/
     flex-wrap: wrap; /* display wrap arrastra las imagenes o el contenido hacia abajo*/
     justify-content: space-around;
@@ -57,7 +57,7 @@ main {
 /* con esto decidiremos tener 5 imagenes en pantalla
     como se hace, se divide la cantidad que es 5 por 100(100% de la pagina)
     y se aplica en un width calc() -- esto es para PC escritorio */
-.galeria img{
+.main__section-galery-img{
     margin: 1rem;
     width: calc(20% - 2rem);
 }
@@ -68,22 +68,22 @@ main {
     margin: 0 auto;
   }
   
-  .form-group {
+  .form__section-group {
     margin-bottom: 15px;
   }
   
-  .form-group label {
+  .form__section-group label {
     display: block;
     margin-bottom: 5px;
   }
   
-  .form-group input, .form-group textarea {
+  .form__section-group input, .form__section-group textarea {
     width:100%;
     padding: 8px;
     box-sizing: border-box;
   }
   
-  button {
+  .main__section-form-button {
     background-color: #007bff;
     color: white;
     padding: 10px 20px;
@@ -91,7 +91,7 @@ main {
     cursor: pointer;
   }
   
-  button:hover {
+  .main__section-form-button:hover {
     background-color: #0056b3;
   }
   
@@ -109,7 +109,7 @@ footer {
 
 /* Notebooks*/
 @media (max-width: 1200px) {
-    .galeria img {
+    .main__section-galery-img {
         margin: 1rem;
         width: calc(25% - 2rem);
     }
@@ -118,37 +118,37 @@ footer {
 /* Tablets*/
 
 @media (max-width: 992px) {
-    .galeria img {
+    .main__section-galery-img {
         margin: 1rem;
         width: calc(33,333% - 2rem);
     }
 }
 
 @media (max-width: 778px) {
-    .galeria img {
+    .main__section-galery-img {
         margin: 1rem;
         width: calc(100% - 2rem);
     }
 }
 
 @media (max-width: 576px) {
-    .galeria img {
+    .main__section-galery-img {
         margin: 1rem;
         width: calc(100% - 2rem);
     }
 }
 @media (max-width: 369px) {
-    .galeria img {
+    .main__section-galery-img {
         margin: 1rem;
         width: calc(100% - 2rem);
     }
 
-    nav a {
+    .header__nav-link {
         display: block;
         margin: 0.5rem 0;
     }
 
-    nav a::after {
+    .header__nav-link::after {
         content: none;
     }
 }
