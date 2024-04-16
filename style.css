@@ -109,7 +109,7 @@ header {
 footer {
     background-color: #1d45c7;
     text-align: center; /*modificacion de  color en el fondo del  fooder */
-    padding: 20px;
+    padding: 15px;
     /* Con esto solucionamos el sticly footer*/
     position: fixed;
     left: 0;
